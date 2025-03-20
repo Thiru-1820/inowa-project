@@ -13,6 +13,7 @@ import MCQPage from "./pages/MCQPage";
 import CodingRoundPage from "./pages/CodingRoundPage";
 import CollegeAdmin from "./pages/CollegeAdmin";
 import Profile from "./pages/Profile";
+import Login from "./pages/Login";
 
 // ProtectedRoute Component
 const ProtectedRoute = ({ element }) => {
@@ -48,6 +49,7 @@ function App() {
             element={<ProtectedRoute element={<CodingRoundPage />} />}
           />
           <Route path="/college-admin" element={<CollegeAdmin />} />
+          <Route path="/admin" element={<Login />} />
         </Routes>
       </div>
     </Router>

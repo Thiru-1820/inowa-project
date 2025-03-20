@@ -23,7 +23,7 @@ function LoginSignup() {
 
       // Store token for testing purposes
       localStorage.setItem("token", response.data.token);
-      navigate("/home");
+      navigate("/home"); // Redirect normal users to /home
     } catch (err) {
       setError(
         isSignup ? "Signup failed. Try again." : "Invalid email or password"

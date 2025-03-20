@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Form, Button, ListGroup, Alert } from "react-bootstrap";
 
 const CollegeAdmin = () => {
   const [emails, setEmails] = useState("");
-  const [company, setCompany] = useState(""); // Store company name
+  const [company, setCompany] = useState("");
   const [assignedCredentials, setAssignedCredentials] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    if (!token) {
+      alert("You must be logged in as an admin to access this page.");
+      navigate("/admin");
+    }
+  }, [navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,11 +31,12 @@ const CollegeAdmin = () => {
     const emailList = emails.split(",").map((email) => email.trim());
 
     try {
+      const token = localStorage.getItem("authToken");
       const response = await axios.post(
-        "http://localhost:5000/api/assign-credentials",
+        "http://localhost:5000/api/admin/assign-credentials",
+        { emails: emailList, company },
         {
-          emails: emailList,
-          company,
+          headers: { Authorization: `Bearer ${token}` },
         }
       );
 

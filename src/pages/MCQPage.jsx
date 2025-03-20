@@ -8,7 +8,7 @@ const MCQPage = () => {
       id: 1,
       question: "What is React?",
       options: ["Library", "Framework", "Language"],
-      correctAnswer: "Library",
+      correctAnswer: "Framework",
     },
     {
       id: 2,

@@ -1,12 +1,13 @@
 /* Ensure the body and html take full height */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
 .interview-detail {
   padding: 2rem;
-  background: #E2FDFF; /* Light background color */
+  background: #e2fdff; /* Light background color */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 100%;
@@ -26,12 +27,12 @@ html, body {
 }
 
 .interview-info h2 {
-  color: #5465FF; /* Title color */
+  color: #5465ff; /* Title color */
   font-size: 2rem; /* Increased font size */
 }
 
 .interview-info h3 {
-  color: #788BFF; /* Subtitle color */
+  color: #788bff; /* Subtitle color */
   font-size: 1.5rem; /* Increased font size */
 }
 
@@ -61,7 +62,7 @@ html, body {
 }
 
 .round-card h4 {
-  color: #5465FF; /* Card title color */
+  color: #5465ff; /* Card title color */
   font-size: 1.5rem; /* Increased font size */
   margin-bottom: 0.5rem;
 }
@@ -79,7 +80,7 @@ html, body {
 
 .enter-round-button {
   padding: 0.75rem;
-  background-color: #5465FF; /* Theme color */
+  background-color: #5465ff; /* Theme color */
   color: white;
   border: none;
   border-radius: 5px;
@@ -89,12 +90,16 @@ html, body {
   box-shadow: 0 0 10px rgba(84, 101, 255, 0.5);
 }
 
+.enter-round-button:disabled {
+  background: grey;
+}
+
 .enter-round-button:hover {
-  background-color: #788BFF; /* Slightly darker on hover */
+  background-color: #788bff; /* Slightly darker on hover */
   box-shadow: 0 0 15px rgba(84, 101, 255, 0.7);
 }
 
 .enter-round-button:active {
-  background-color: #5465FF;
+  background-color: #5465ff;
   box-shadow: 0 0 10px rgba(84, 101, 255, 0.5);
 }

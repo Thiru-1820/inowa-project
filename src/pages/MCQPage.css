@@ -56,9 +56,10 @@
   cursor: not-allowed;
 }
 
-.mcq-result {
+.mcq-result h2 {
+  text-shadow: none !important;
   margin-top: 20px;
   text-align: center;
-  font-size: 18px;
-  color: #28a745;
+  font-size: 24px;
+  color: #007bff !important;
 }
